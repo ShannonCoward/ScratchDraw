@@ -195,13 +195,29 @@
                                             <constraint firstItem="gPW-fL-RZW" firstAttribute="width" secondItem="MP3-lI-ygw" secondAttribute="width" id="zyj-Tt-1ge"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssk-9l-dYj">
+                                        <rect key="frame" x="512" y="472" width="80" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2nQ-vB-WW1"/>
+                                            <constraint firstAttribute="width" constant="80" id="eiV-F8-1dG"/>
+                                        </constraints>
+                                        <state key="normal" title="Erase">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6sC-Gm-nvd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="g0U-Kg-AJ7" firstAttribute="leading" secondItem="dmT-vQ-lBt" secondAttribute="leading" constant="8" id="8oL-WW-Hbe"/>
                                     <constraint firstItem="9w8-2b-FWZ" firstAttribute="top" secondItem="dmT-vQ-lBt" secondAttribute="top" constant="520" id="AsS-ea-lw5"/>
+                                    <constraint firstAttribute="trailing" secondItem="ssk-9l-dYj" secondAttribute="trailing" constant="8" id="B40-CH-IvC"/>
                                     <constraint firstItem="g0U-Kg-AJ7" firstAttribute="top" secondItem="dmT-vQ-lBt" secondAttribute="top" constant="34" id="B6e-gF-W4s"/>
                                     <constraint firstItem="9w8-2b-FWZ" firstAttribute="leading" secondItem="dmT-vQ-lBt" secondAttribute="leading" id="HOK-Ig-L4Z"/>
+                                    <constraint firstItem="9w8-2b-FWZ" firstAttribute="top" secondItem="ssk-9l-dYj" secondAttribute="bottom" constant="8" id="Hjx-WQ-NDC"/>
                                     <constraint firstAttribute="bottom" secondItem="g0U-Kg-AJ7" secondAttribute="bottom" constant="489" id="Jsh-Ya-uzo"/>
                                     <constraint firstAttribute="bottom" secondItem="9w8-2b-FWZ" secondAttribute="bottom" id="LHR-nq-PNk"/>
                                     <constraint firstAttribute="trailing" secondItem="9w8-2b-FWZ" secondAttribute="trailing" id="YA2-xy-hXH"/>

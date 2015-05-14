@@ -18,7 +18,10 @@ class ViewController: UIViewController {
             
         scratchPad.currentColor = color
             
-    
+//            if color == UIColor.whiteColor() {
+//                var context = UIGraphicsGetCurrentContext()
+//                CGContextSetLineWidth(context, 25.0)
+//            }
         }
     }
 
