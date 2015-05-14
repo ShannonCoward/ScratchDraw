@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScratchDraw" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmT-vQ-lBt" customClass="SratchView" customModule="ScratchDraw" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0U-Kg-AJ7">
+                                        <rect key="frame" x="8" y="34" width="136" height="77"/>
+                                        <color key="backgroundColor" red="0.25024699919999999" green="0.43218778689999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="136" id="0e0-D0-yw3"/>
+                                            <constraint firstAttribute="height" constant="77" id="FbY-5Q-mIv"/>
+                                        </constraints>
+                                        <state key="normal" title="Clear">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clearLines:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6yx-hg-Pnq"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9w8-2b-FWZ">
+                                        <rect key="frame" x="0.0" y="520" width="600" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHt-5I-xge">
+                                                <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                                <color key="backgroundColor" red="1" green="0.063151443837525689" blue="0.28519136525636724" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A1R-gp-yH6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gq7-V7-QNS">
+                                                <rect key="frame" x="78" y="10" width="60" height="60"/>
+                                                <color key="backgroundColor" red="0.17914188645430595" green="0.23745577332056333" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXI-WC-O2g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPW-fL-RZW">
+                                                <rect key="frame" x="146" y="10" width="60" height="60"/>
+                                                <color key="backgroundColor" red="0.33720923185892859" green="0.5" blue="0.20871871163729838" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RTd-FK-fCp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="g0U-Kg-AJ7" firstAttribute="leading" secondItem="dmT-vQ-lBt" secondAttribute="leading" constant="8" id="8oL-WW-Hbe"/>
+                                    <constraint firstItem="9w8-2b-FWZ" firstAttribute="top" secondItem="dmT-vQ-lBt" secondAttribute="top" constant="520" id="AsS-ea-lw5"/>
+                                    <constraint firstItem="g0U-Kg-AJ7" firstAttribute="top" secondItem="dmT-vQ-lBt" secondAttribute="top" constant="34" id="B6e-gF-W4s"/>
+                                    <constraint firstItem="9w8-2b-FWZ" firstAttribute="leading" secondItem="dmT-vQ-lBt" secondAttribute="leading" id="HOK-Ig-L4Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="g0U-Kg-AJ7" secondAttribute="bottom" constant="489" id="Jsh-Ya-uzo"/>
+                                    <constraint firstAttribute="bottom" secondItem="9w8-2b-FWZ" secondAttribute="bottom" id="LHR-nq-PNk"/>
+                                    <constraint firstAttribute="trailing" secondItem="9w8-2b-FWZ" secondAttribute="trailing" id="YA2-xy-hXH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dmT-vQ-lBt" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Q5c-ma-99x"/>
+                            <constraint firstItem="dmT-vQ-lBt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SCZ-HG-AQ4"/>
+                            <constraint firstAttribute="trailing" secondItem="dmT-vQ-lBt" secondAttribute="trailing" id="oy9-Pt-bOf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scratchPad" destination="dmT-vQ-lBt" id="ecA-hp-Vpp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-69" y="340"/>
         </scene>
     </scenes>
 </document>

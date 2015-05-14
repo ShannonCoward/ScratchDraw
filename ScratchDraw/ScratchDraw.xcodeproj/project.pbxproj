@@ -13,6 +13,7 @@
 		048868A51B04D6FF0044B9DA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048868A41B04D6FF0044B9DA /* Images.xcassets */; };
 		048868A81B04D6FF0044B9DA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048868A61B04D6FF0044B9DA /* LaunchScreen.xib */; };
 		048868B41B04D6FF0044B9DA /* ScratchDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048868B31B04D6FF0044B9DA /* ScratchDrawTests.swift */; };
+		048868BE1B04D9F50044B9DA /* SratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048868BD1B04D9F50044B9DA /* SratchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		048868AD1B04D6FF0044B9DA /* ScratchDrawTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScratchDrawTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		048868B21B04D6FF0044B9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048868B31B04D6FF0044B9DA /* ScratchDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchDrawTests.swift; sourceTree = "<group>"; };
+		048868BD1B04D9F50044B9DA /* SratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SratchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,9 @@
 		0488689A1B04D6FE0044B9DA /* ScratchDraw */ = {
 			isa = PBXGroup;
 			children = (
-				0488689D1B04D6FE0044B9DA /* AppDelegate.swift */,
-				0488689F1B04D6FE0044B9DA /* ViewController.swift */,
 				048868A11B04D6FF0044B9DA /* Main.storyboard */,
-				048868A41B04D6FF0044B9DA /* Images.xcassets */,
-				048868A61B04D6FF0044B9DA /* LaunchScreen.xib */,
+				0488689F1B04D6FE0044B9DA /* ViewController.swift */,
+				048868BD1B04D9F50044B9DA /* SratchView.swift */,
 				0488689B1B04D6FE0044B9DA /* Supporting Files */,
 			);
 			path = ScratchDraw;
@@ -90,6 +90,9 @@
 		0488689B1B04D6FE0044B9DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				048868A41B04D6FF0044B9DA /* Images.xcassets */,
+				048868A61B04D6FF0044B9DA /* LaunchScreen.xib */,
+				0488689D1B04D6FE0044B9DA /* AppDelegate.swift */,
 				0488689C1B04D6FE0044B9DA /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048868BE1B04D9F50044B9DA /* SratchView.swift in Sources */,
 				048868A01B04D6FE0044B9DA /* ViewController.swift in Sources */,
 				0488689E1B04D6FE0044B9DA /* AppDelegate.swift in Sources */,
 			);

@@ -9,17 +9,60 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    
+    @IBAction func changeColor(sender:UIButton) {
+        
+        if let color = sender.backgroundColor {
+            
+        scratchPad.currentColor = color
+            
+    
+        }
+    }
+
+    
+    @IBAction func clearLines(sender: AnyObject) {
+        
+        scratchPad.scratches = []
+        scratchPad.setNeedsDisplay()
+    }
+    
+    @IBOutlet weak var scratchPad: SratchView!   //<====Setting up view
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+////        view.addSubview(scratchPad) //<===setting up canvas
+////        scratchPad.frame = view.frame
+//        scratchPad.backgroundColor = UIColor.whiteColor()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        if let touch = touches.first as? UITouch {
+            
+            let location = touch.locationInView(scratchPad)
+            scratchPad.newScratchWidthStartPoint(location)
+        
+        }
+        
     }
-
-
+    
+    override func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+        
+        if let touch = touches.first as? UITouch {
+        
+                let location = touch.locationInView(scratchPad)
+              //  scratchPad.updateCurrentLineWithLastPoint(location)
+              scratchPad.addPointToCurrentScratch(location)
+        }
+        
+    }
+    
 }
+
+
 
