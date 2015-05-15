@@ -76,6 +76,12 @@ class ViewController: UIViewController {
         
     }
     
+    IBAction func strokeSize(sender:UISlider){
+    
+        
+    
+    }
+    
 }
 
 
