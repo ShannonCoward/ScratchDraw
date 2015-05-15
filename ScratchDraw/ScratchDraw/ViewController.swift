@@ -8,20 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+var fillColors: [UIColor] = [
     
-    
-    
-    @IBAction func changeColor(sender:UIButton) {
-        
-        if let color = sender.backgroundColor {
-            
-        scratchPad.currentColor = color
-            
-    
-        }
-    }
+    UIColor.cyanColor(),
+    UIColor.magentaColor(),
+    UIColor.yellowColor(),
+    UIColor.blackColor(),
 
+]
+
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    
+    @IBOutlet weak var viewBottomConstraint: NSLayoutConstraint!
+    
+    
+    @IBOutlet var fillColorCollectionView: UICollectionView!
+    
     
     @IBAction func clearLines(sender: AnyObject) {
         
@@ -34,9 +37,49 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fillColorCollectionView.dataSource = self
+        fillColorCollectionView.delegate = self
+        
+        viewBottomConstraint.constant = -300
+        
 ////        view.addSubview(scratchPad) //<===setting up canvas
 ////        scratchPad.frame = view.frame
 //        scratchPad.backgroundColor = UIColor.whiteColor()
+        
+        
+        
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection: Int) -> Int {
+        
+        return fillColors.count
+        
+    }
+    
+    
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("colorCell", forIndexPath: indexPath) as! ColorCell
+        
+        cell.backgroundColor = fillColors[indexPath.item]
+        
+        
+        return cell
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as!
+            ColorCell
+        
+        if let color = cell.backgroundColor {
+        
+            scratchPad.currentColor = color
+        
+        }
         
     }
 
@@ -58,10 +101,22 @@ class ViewController: UIViewController {
                 let location = touch.locationInView(scratchPad)
               //  scratchPad.updateCurrentLineWithLastPoint(location)
               scratchPad.addPointToCurrentScratch(location)
+            
         }
         
     }
     
+    @IBAction func showHide(sender: AnyObject) {
+        
+        viewBottomConstraint.constant = (viewBottomConstraint.constant == 0) ? -300 : 0
+        
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
+            
+            
+            
+        })
+        
+    }
 }
 
 

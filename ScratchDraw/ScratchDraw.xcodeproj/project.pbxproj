@@ -14,6 +14,7 @@
 		048868A81B04D6FF0044B9DA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048868A61B04D6FF0044B9DA /* LaunchScreen.xib */; };
 		048868B41B04D6FF0044B9DA /* ScratchDrawTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048868B31B04D6FF0044B9DA /* ScratchDrawTests.swift */; };
 		048868BE1B04D9F50044B9DA /* SratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048868BD1B04D9F50044B9DA /* SratchView.swift */; };
+		048868C01B062AAA0044B9DA /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048868BF1B062AAA0044B9DA /* ColorCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		048868B21B04D6FF0044B9DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		048868B31B04D6FF0044B9DA /* ScratchDrawTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchDrawTests.swift; sourceTree = "<group>"; };
 		048868BD1B04D9F50044B9DA /* SratchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SratchView.swift; sourceTree = "<group>"; };
+		048868BF1B062AAA0044B9DA /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				048868A11B04D6FF0044B9DA /* Main.storyboard */,
+				048868BF1B062AAA0044B9DA /* ColorCell.swift */,
 				0488689F1B04D6FE0044B9DA /* ViewController.swift */,
 				048868BD1B04D9F50044B9DA /* SratchView.swift */,
 				0488689B1B04D6FE0044B9DA /* Supporting Files */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				048868BE1B04D9F50044B9DA /* SratchView.swift in Sources */,
+				048868C01B062AAA0044B9DA /* ColorCell.swift in Sources */,
 				048868A01B04D6FE0044B9DA /* ViewController.swift in Sources */,
 				0488689E1B04D6FE0044B9DA /* AppDelegate.swift in Sources */,
 			);
@@ -415,6 +419,7 @@
 				048868B91B04D6FF0044B9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		048868BA1B04D6FF0044B9DA /* Build configuration list for PBXNativeTarget "ScratchDrawTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +428,7 @@
 				048868BC1B04D6FF0044B9DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
