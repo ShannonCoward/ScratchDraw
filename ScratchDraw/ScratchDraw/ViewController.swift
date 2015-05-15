@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+   
     
     @IBAction func changeColor(sender:UIButton) {
         
@@ -61,6 +61,17 @@ class ViewController: UIViewController {
                 let location = touch.locationInView(scratchPad)
               //  scratchPad.updateCurrentLineWithLastPoint(location)
               scratchPad.addPointToCurrentScratch(location)
+        }
+        
+    }
+    
+    @IBAction func undoButton(sender:UIButton){
+        
+        if scratchPad.scratches.count > 0 {
+            
+            var removedLine = scratchPad.scratches.removeLast()
+            scratchPad.setNeedsDisplay()
+            
         }
         
     }
