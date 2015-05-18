@@ -99,8 +99,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if let touch = touches.first as? UITouch {
         
                 let location = touch.locationInView(scratchPad)
-              //  scratchPad.updateCurrentLineWithLastPoint(location)
-              scratchPad.addPointToCurrentScratch(location)
+               scratchPad.updateCurrentScratchWithLastPoint(location)
+//              scratchPad.addPointToCurrentScratch(location)
             
         }
         
