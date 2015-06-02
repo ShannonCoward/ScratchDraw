@@ -7,6 +7,10 @@
 //
 
 #import "ViewController.h"
+#import <UIKit/UIKit.h>
+
+
+@property (nonatomic) NSMutableArray * fillColors;
 
 @interface ViewController ()
 
