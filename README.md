@@ -1,3 +1,3 @@
 # ScratchDraw
 
-##Paint like app
+##Paint like app made with Swift
